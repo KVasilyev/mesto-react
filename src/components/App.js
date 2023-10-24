@@ -57,10 +57,10 @@ function App() {
       buttonText="Сохранить"
       onClose={closeAllPopups}
     >
-      <input class="popup__input input input_type_name" placeholder="Имя" type="text" id="name" name="name" minlength="2" maxlength="40" required />
-      <span class="popup__input-error name-input-error"></span>
-      <input class="popup__input input input_type_job" placeholder="Работа" type="text" id="about" name="about" minlength="2" maxlength="200" required />
-      <span class="popup__input-error about-input-error"></span>
+      <input className="popup__input input input_type_name" placeholder="Имя" type="text" id="name" name="name" minLength="2" maxLength="40" required />
+      <span className="popup__input-error name-input-error"></span>
+      <input className="popup__input input input_type_job" placeholder="Работа" type="text" id="about" name="about" minLength="2" maxLength="200" required />
+      <span className="popup__input-error about-input-error"></span>
     </PopupWithForm>
     <PopupWithForm 
       name='add' 
@@ -69,10 +69,10 @@ function App() {
       buttonText="Создать"
       onClose={closeAllPopups}
     >
-      <input class="popup__input input input_type_description" placeholder="Название" type="text" name="name" id="description" minlength="2" maxlength="30" required />
-      <span class="popup__input-error description-input-error"></span>
-      <input class="popup__input input input_type_link" placeholder="Ссылка на картинку" type="url" name="link" id="url" required />
-      <span class="popup__input-error url-input-error"></span>
+      <input className="popup__input input input_type_description" placeholder="Название" type="text" name="name" id="description" minLength="2" maxLength="30" required />
+      <span className="popup__input-error description-input-error"></span>
+      <input className="popup__input input input_type_link" placeholder="Ссылка на картинку" type="url" name="link" id="url" required />
+      <span className="popup__input-error url-input-error"></span>
     </PopupWithForm>
     <PopupWithForm 
       name='change-avatar' 
@@ -81,8 +81,8 @@ function App() {
       buttonText="Сохранить"
       onClose={closeAllPopups}
     >
-      <input class="popup__input input input_type_link" placeholder="Ссылка на картинку аватара" type="url" name="avatar" id="avatar" required />
-      <span class="popup__input-error avatar-input-error"></span>
+      <input className="popup__input input input_type_link" placeholder="Ссылка на картинку аватара" type="url" name="avatar" id="avatar" required />
+      <span className="popup__input-error avatar-input-error"></span>
     </PopupWithForm>
     <ImagePopup 
       card={selectedCard} 
