@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
     return (
-    <footer className="footer">
-        <p className="footer__copyright" lang="en">© 2020 Mesto Russia</p>
-    </footer>
+        <footer className="footer">
+            <p className="footer__copyright" lang="en">© 2020 Mesto Russia</p>
+        </footer>
     )
 }
 

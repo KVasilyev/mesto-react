@@ -40,7 +40,7 @@ function Main(props) {
         <section className="elements" aria-label="Список картинок">
           <ul className="elements__grid">
                 {cards.map((card) => {
-                    return (
+                    return (                    
                         <Card card={card} key={card._id} onCardClick={props.onCardClick}/>
                     )
                 })}

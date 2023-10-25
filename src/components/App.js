@@ -7,26 +7,28 @@ import ImagePopup from "./ImagePopup.js";
 
 function App() {
 
-  // Редактирование профиля
+  // Константы
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(null);
+
+  // Редактирование профиля
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
 
   // Смена аватара
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
   }
 
   // Редактирование профиля
-  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
 
   // Открытие попапа с картинкой
-  const [selectedCard, setSelectedCard] = React.useState(null);
   function handleCardClick(card) {
     setSelectedCard(card);
   }
@@ -57,9 +59,27 @@ function App() {
       buttonText="Сохранить"
       onClose={closeAllPopups}
     >
-      <input className="popup__input input input_type_name" placeholder="Имя" type="text" id="name" name="name" minLength="2" maxLength="40" required />
+      <input 
+        className="popup__input input input_type_name"
+        placeholder="Имя"
+        type="text"
+        id="name"
+        name="name"
+        minLength="2"
+        maxLength="40"
+        required
+      />
       <span className="popup__input-error name-input-error"></span>
-      <input className="popup__input input input_type_job" placeholder="Работа" type="text" id="about" name="about" minLength="2" maxLength="200" required />
+      <input 
+        className="popup__input input input_type_job"
+        placeholder="Работа"
+        type="text"
+        id="about"
+        name="about"
+        minLength="2"
+        maxLength="200"
+        required
+      />
       <span className="popup__input-error about-input-error"></span>
     </PopupWithForm>
     <PopupWithForm 
@@ -69,9 +89,25 @@ function App() {
       buttonText="Создать"
       onClose={closeAllPopups}
     >
-      <input className="popup__input input input_type_description" placeholder="Название" type="text" name="name" id="description" minLength="2" maxLength="30" required />
+      <input 
+        className="popup__input input input_type_description"
+        placeholder="Название"
+        type="text"
+        name="name"
+        id="description"
+        minLength="2"
+        maxLength="30"
+        required
+      />
       <span className="popup__input-error description-input-error"></span>
-      <input className="popup__input input input_type_link" placeholder="Ссылка на картинку" type="url" name="link" id="url" required />
+      <input 
+        className="popup__input input input_type_link"
+        placeholder="Ссылка на картинку"
+        type="url"
+        name="link"
+        id="url"
+        required
+      />
       <span className="popup__input-error url-input-error"></span>
     </PopupWithForm>
     <PopupWithForm 
@@ -81,7 +117,14 @@ function App() {
       buttonText="Сохранить"
       onClose={closeAllPopups}
     >
-      <input className="popup__input input input_type_link" placeholder="Ссылка на картинку аватара" type="url" name="avatar" id="avatar" required />
+      <input 
+        className="popup__input input input_type_link"
+        placeholder="Ссылка на картинку аватара"
+        type="url"
+        name="avatar"
+        id="avatar"
+        required
+      />
       <span className="popup__input-error avatar-input-error"></span>
     </PopupWithForm>
     <ImagePopup 
