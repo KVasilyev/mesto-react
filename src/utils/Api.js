@@ -54,6 +54,7 @@ class Api {
         })
         .then(this._checkResponse)
     }
+
     // Загружаем карточку на сервер
     async addCards({name, link}) {
         return fetch(`${this._baseUrl}/cards`, {
@@ -66,6 +67,7 @@ class Api {
         })
         .then(this._checkResponse)
     }
+    
     // Удаление карточки с сервера
     async deleteCards(id) {
         return fetch(`${this._baseUrl}/cards/${id}`, {
@@ -75,22 +77,15 @@ class Api {
         .then(this._checkResponse)
     }
 
-    //Ставим лайк
-    async setLike(card) {
+    //Лайки
+    async likeToggle(card, isLike) {
         return fetch(`${this._baseUrl}/cards/${card}/likes`, {
-            method: 'PUT',
-            headers: this._headers
-        })
-        .then(this._checkResponse)
-    }
-    //Удаляем лайк
-    async unsetLike(card) {
-        return fetch(`${this._baseUrl}/cards/${card}/likes`, {
-            method: 'DELETE',
+            method: isLike ? 'DELETE' : 'PUT',
             headers: this._headers
         })
         .then(this._checkResponse)
     }  
+
 }
 
 // API 
