@@ -29,7 +29,7 @@ function App() {
 
 
   //Юзер-стейт
-  let [currentUser, setCurrentUser] = React.useState({});
+  const [currentUser, setCurrentUser] = React.useState({});
   useEffect(() => {
     api.getMyInfo()
     .then((res) => {  
